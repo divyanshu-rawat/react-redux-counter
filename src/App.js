@@ -22,6 +22,7 @@ class App extends React.Component{
   handleClick_inc(){
     // this.props.dispatch({type:'INCREMENT'});
     // this.props.Counter({type:'INCREMENT'});
+    console.log(this.props);
     this.props.INC()
   }
 
@@ -44,7 +45,7 @@ class App extends React.Component{
 }
 
 function mapStateToProps(state) {
-  return { count: state  }
+  return { count: state.count  }
 }
 
 function mapDispatchToProps(dispatch) {

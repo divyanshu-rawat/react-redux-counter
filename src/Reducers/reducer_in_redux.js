@@ -17,19 +17,29 @@ function(state = 0,action){
 }
 */
 
-const Counter = (state = 0,action) => {
+
+const initialState = {
+  count: 0
+};
+
+// let ne_O = Object.assign({},{ count: 'abcd'});
+// console.log(ne_O);
+
+console.log('Intial State',initialState.count);
+
+const Counter = (state = initialState,action) => {
 
 	switch(action.type) {
 		case 'INCREMENT':
-			return state + 1
+			return Object.assign({},{ count: state.count  + 1});
 			break;
 
 		case 'DECREMENT':
-			return state - 1
+			return Object.assign({},{ count: state.count  - 1});
 			break;
 
 		default:
-			return state;
+			return Object.assign({},{ count: state.count });;
 	}
 
 }
