@@ -10,6 +10,7 @@ import Counter from './reducer_in_redux';
 // import {createStore} from 'redux';
 
 const store = createStore(Counter);
+
 ReactDOM.render(
   <Provider store={store}>
     <App />
