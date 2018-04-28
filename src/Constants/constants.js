@@ -1,0 +1,7 @@
+
+
+export const CONST = {
+
+	INCREMENT_COUNTER : "INCREMENT",
+	DECREMENT_COUNTER : "DECREMENT"
+}

@@ -1,11 +1,12 @@
 
 import React, { Component } from 'react';
-import Increment from './counter_inc';
-import Decrement from './counter_dec';
+import Increment from './Components/counter_inc';
+import Decrement from './Components/counter_dec';
+
 import { connect } from 'react-redux';
-import Counter from './reducer_in_redux';
+import Counter from './Reducers/reducer_in_redux';
 import { bindActionCreators } from 'redux';
-import {incrementCounter as INC,decrementCounter as DEC} from './action_creators';
+import {incrementCounter as INC,decrementCounter as DEC} from './Action_Creators/action_creators';
 
 
 
@@ -21,13 +22,13 @@ class App extends React.Component{
   handleClick_inc(){
     // this.props.dispatch({type:'INCREMENT'});
     // this.props.Counter({type:'INCREMENT'});
-    this.props.incrementCounter()
+    this.props.INC()
   }
 
    handleClick_dec(){
     // this.props.dispatch({type:'DECREMENT'});
     // this.props.Counter({type:'DECREMENT'});
-    this.props.decrementCounter();
+    this.props.DEC();
   }
 
   render(){
